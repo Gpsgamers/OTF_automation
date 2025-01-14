@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="features" value=""/>
+	<parameter name="tags" value=""/>
+	<parameter name="condition" value="@feature and (@login or ${features})"/>	
+	
+	<parameter name="Url_QA" value="https://onthefly-qa.contus.us/" />
+	<parameter name="Url_Dev" value="https://onthefly-dev.contus.us/" />
+	<parameter name="Url_Prod" value="https://console.onthefly.stream/" />
+	
+	<test name="Test">
+		<classes>
+			<class name="Runners.runner" />
+		</classes>	
+	</test>
+	
+</suite>
