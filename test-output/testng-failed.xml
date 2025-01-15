@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="features" value=""/>
+  <parameter name="Url_Prod" value="https://console.onthefly.stream/"/>
+  <parameter name="condition" value="@feature and (@login or ${features})"/>
+  <parameter name="Url_QA" value="https://onthefly-qa.contus.us/"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="env" value="qa"/>
+  <parameter name="Url_Dev" value="https://onthefly-dev.contus.us/"/>
+  <parameter name="tags" value=""/>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Runners.runner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="env_setup"/>
+          <include name="runScenario" invocation-numbers="3 4 5 6 7 8 9"/>
+          <include name="tearDownClass"/>
+          <include name="browserQuitconfiguration"/>
+        </methods>
+      </class> <!-- Runners.runner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
